@@ -6,31 +6,31 @@ class Node:
         self.right = R
         self.value = n
 
-    def inorderTraversal(self):
+    def inOrderTraversal(self):
             res = []
             if self:
-                res = self.inorderTraversal(self.left)
+                res = self.inOrderTraversal(self.left)
                 res.append(self.value)
-                res = res + self.inorderTraversal(self.right)
+                res = res + self.inOrderTraversal(self.right)
             return res
     
-    def preorderTraversal(self):
+    def preOrderTraversal(self):
         res = []
         if self:
             res.append(self.value)
-            res = res + self.preorderTraversal(self.left)
-            res = res + self.preorderTraversal(self.right)
+            res = res + self.preOrderTraversal(self.left)
+            res = res + self.preOrderTraversal(self.right)
         return res
     
-    def postorderTraversal(self):
+    def postOrderTraversal(self):
         res = []
         if self:
-            res = self.postorderTraversal(self.left)
-            res = res + self.postorderTraversal(self.right)
+            res = self.postOrderTraversal(self.left)
+            res = res + self.postOrderTraversal(self.right)
             res.append(self.value)
         return res
     
-    def levelorder(self):
+    def levelOrder(self):
         if self==None:
             return
         q=Queue()
@@ -45,7 +45,7 @@ class Node:
 
 
 
-binaryTree = Node(                # root  0
+binaryTree = Node(              # root  0
                 Node(           # left  l1
                     None,       # left  l1-l2
                     Node(       # right l1-r2
@@ -71,5 +71,5 @@ binaryTree = Node(                # root  0
 
 
 
-result = [i for i in binaryTree.levelorder()]
+result = [i for i in binaryTree.levelOrder()]
 print(result)

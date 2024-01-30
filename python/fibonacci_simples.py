@@ -1,11 +1,10 @@
-import time
+import timeit
 import sys
 
 def f(n):
     if n == 0: return 0
     if n == 1: return 1
 
-        
     last = [0, 0]
     r = 1
 
@@ -16,14 +15,7 @@ def f(n):
     
     return r
 
-t0 = time.time()
-
 
 sys.set_int_max_str_digits(500000)
 
-result = f(int(2000000))
-print(result)
-
-t1 = time.time()
-
-print(t1-t0)
+print(f"Tempo de execução: {timeit.timeit(lambda: print(f(int(20))), number=1)} segundos")

@@ -10,18 +10,18 @@ def fibonacci(n):
         a, b = fibonacci(n // 2)
         c = a * (b * 2 - a)
         d = a * a + b * b
-        if n % 2 == 0:
-            return (c, d)
+        if n % 2:
+            return (d, c + d)
         else:
-        	return (d, c + d)
+            return (c, d)
+
 
 def fib(n):
-    isNeg = False
-    if n < 0: isNeg = True
+    isNeg = n < 0
     
     f = fibonacci(n)[0]
     
-    return f * -1 if (isNeg and n % 2 == 0) else f
+    return f * -1 if (isNeg and not n % 2) else f
         
 
 t0 = time.time()

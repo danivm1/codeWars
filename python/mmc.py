@@ -16,7 +16,7 @@ def gcd(lst):
                 break
 
             while x < n:
-                n = n - x
+                n -= x
         
             numbers[i] = n
 

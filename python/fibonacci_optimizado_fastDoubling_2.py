@@ -1,4 +1,4 @@
-import time
+import timeit
 import sys
 
 def fib(n):
@@ -18,12 +18,6 @@ def fib(n):
     return y
 
 
-t0 = time.time()
-
 sys.set_int_max_str_digits(500000)
 
-print(fib(-2000000))
-
-t1 = time.time()
-
-print(t1-t0)
+print(f"Tempo de execução: { timeit.timeit(lambda: print(fib(-200)), number=1) } segundos")
