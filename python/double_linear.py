@@ -17,9 +17,10 @@ def dbl_linear(n):
 
     return u
 
-print(f"Tempo de execução: {timeit.timeit(lambda: dbl_linear(1000000), number=1)} segundos")
+print(f"Tempo de execução: {timeit.timeit(lambda: print(dbl_linear(30), end='; '), number=1)} segundos")
 
 
- # in u, then y = 2 * x + 1 and z = 3 * x + 1 mus
-# [1, 3, 4, 7, 9, 10, 13, 15, 21, 22, 31]
-# [1, 3, 4, 7, 9, 10, 13, 15, 19, 21, 22, 27, 28, 31, 40, 43, 45, 46, 63, 64, 67, 94]
+ # y = 2 * x + 1 and z = 3 * x + 1 (x == last added to u)
+# y = [1, 3, 7, 9, 15, 19, 21, 27, 31]
+# z = [1, 4, 10, 13, 22, 28]
+# u = [1, 3, 4, 7, 9, 10, 13, 15, 19, 21, 22, 27, 28, 31]
