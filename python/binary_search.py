@@ -15,8 +15,8 @@ def binary_search(lst: list[int], n: int) -> int:
     return -1
 
 def normal_search(lst: list[int], n: int) -> int:
-    for i in lst: # O(N)
-        if n==i: return i # O(1)
+    for i in lst:
+        if n==i: return i
     return -1
 
 
