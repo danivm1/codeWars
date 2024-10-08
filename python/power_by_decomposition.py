@@ -1,3 +1,5 @@
+from time import time
+
 def bin_decomp(x):
     s = -1
     while x:
@@ -5,7 +7,7 @@ def bin_decomp(x):
         s += 1
     
     return s
-    
+
 def loop(l, a):
     b = 1
     for _ in range(l):
@@ -30,16 +32,19 @@ def power(a, n):
     
     return result
 
-a = 2
-l = 100
-x=[]
+ini = time()
+l = 500
+x = []
 for a in range(l):
     for n in range(l):
-        x.append(bool(power(a, n) == a**n))
+        x.append(power(a, n) == a**n)
         # print(n)
         # print(len(power(a, n))-1)
         # print(len(str(a**n))-1)
 print(all(x))
+print(time()-ini)
+
+# print(power(100000, 100000) == 100000**100000)
 
 # 10^20
 
@@ -80,14 +85,3 @@ print(all(x))
 # 54 
 # 4
 # 2
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
