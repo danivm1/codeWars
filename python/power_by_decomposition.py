@@ -85,3 +85,7 @@ print(time()-ini)
 # 54 
 # 4
 # 2
+
+
+
+# base^n = (base^(n//2))^2 * (base if n%2 else 1)
