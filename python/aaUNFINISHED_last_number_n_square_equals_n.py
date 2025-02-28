@@ -1,5 +1,11 @@
 # https://www.codewars.com/kata/584dee06fe9c9aef810001e8/train/python
 
+
+
+# Testar lógica (n^2 - n) // 10^len(n) == 0
+
+
+
 import timeit
 import sys
 
@@ -51,7 +57,7 @@ def green(n):
     return sorted(lst)
 
 
-print(timeit.timeit(lambda: green(4000), number=1))
+print(timeit.timeit(lambda: green(5000), number=1))
 
 
 

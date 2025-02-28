@@ -1,0 +1,22 @@
+<html>
+    <body>
+        <div name="rb-group">
+            <input type="radio" name="EC" id="rbCasado" value="Casado">
+            <label>Casado</label>
+            <br/>
+            <input type="radio" name="EC" id="rbSolteiro" value="Solteiro">
+            <label>Solteiro</label>
+        </div>
+        <input type="button" onclick="verifica()" value="verificar">
+        <input type="text" id="txtVerifica" value="">
+    </body>
+    <script>
+        function verifica(){
+            let EC = document.querySelector("input[name=EC]:checked");
+
+            ECValor = EC.value
+
+            document.getElementById("txtVerifica").value = ECValor
+        }
+    </script>
+</html>

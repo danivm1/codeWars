@@ -16,7 +16,7 @@ def yield_primes(m: int):
 
         if i > (m**0.5)//1: break
         
-        for x in range(i*3, max(primeList) + 1, i*2):
+        for x in range(i*i, max(primeList) + 1, i*2):
             try: primeList.remove(x)
             except: pass
 
@@ -29,7 +29,7 @@ def return_primes(m: int):
     for i in primeList:
         if i > (m**0.5)//1: break
         
-        for x in range(i*3, max(primeList) + 1, i*2):
+        for x in range(i*i, max(primeList) + 1, i*2):
             try: primeList.remove(x)
             except: pass
 
@@ -37,8 +37,8 @@ def return_primes(m: int):
 
 
 
-print(f"Tempo de execução: {timeit.timeit(lambda: [print(i, end=', ') for i in yield_primes(1000000)], number=1)} segundos")
-# print(f"Tempo de execução: {timeit.timeit(lambda: [print(i, end=', ') for i in return_primes(1000000)], number=1)} segundos")
+print(f"Tempo de execução: {timeit.timeit(lambda: [print(i, end=', ') for i in  yield_primes(100)], number=1)} segundos")
+print(f"Tempo de execução: {timeit.timeit(lambda: [print(i, end=', ') for i in return_primes(100)], number=1)} segundos")
 
 
 # return m=1000000 Tempo de execução: 2518.129956699908 segundos
