@@ -12,24 +12,24 @@ def binary_search(lst: list[int], n: int) -> int:
 
         if n == middle: return l, iterations
         if n < middle: right = l; continue
-        if n > middle: left = l; continue
-        
-    return -1
+        if n > middle: left = l+1; continue
 
-def normal_search(lst: list[int], n: int) -> int:
+    return -1, iterations
+
+def naive_search(lst: list[int], n: int) -> int:
     iterations = 0
     
-    for i in lst:
+    for index, i in enumerate(lst):
         iterations += 1
-        if n==i: return i, iterations
-    return -1
+        if n==i: return index, iterations
+    return -1, iterations
 
 
-lst = [i for i in range(1000000)]
-n = 999999
+lst = [i for i in range(8)]
+n = 8
 
 try:
     print(f"Binary - Execução: {__import__('timeit').timeit(lambda: print(binary_search(lst, n)), number=1)} segundos")
-    print(f"Normal - Execução: {__import__('timeit').timeit(lambda: print(normal_search(lst, n)), number=1)} segundos")
+    print(f"Naive - Execução: {__import__('timeit').timeit(lambda: print(naive_search(lst, n)), number=1)} segundos")
 except Exception as err:
     print(f"Erro: {err}")

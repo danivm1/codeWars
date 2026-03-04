@@ -5,7 +5,7 @@ class testClass:
     i: int
 
 md = testClass(i=42)
-md.__class__ = make_dataclass('test', [('s', str, None)], bases=(testClass,))
+md.__class__ = make_dataclass('test', [('s', str, 'asd')], bases=(testClass,))
 
 print(f'i: {md.i}\ns: {md.s}')
 print(asdict(md))
